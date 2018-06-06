@@ -125,6 +125,10 @@ def main(argv):
         print("ERROR, opening file failed: " + str(err))
     except KeyError as err:
         print("ERROR: Wrong data in json file")
+    except ValueError as err:
+        print("Wrong HEX color value")
+    except TypeError as err:
+        print("Wrong RGB color value")
 
 
 if __name__ == "__main__":
